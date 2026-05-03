@@ -38,6 +38,7 @@ const Grid: React.FC<GridProps> = ({ size, currentState, items, obstacles, onCel
 
   const getCellContent = (row: number, col: number): { content: string; bg: string } => {
     const key = `${row},${col}`;
+
     const isObstacle = obstacles.has(key);
     if (isObstacle) return { content: '🧱', bg: 'bg-gray-700' };
 
